@@ -1,5 +1,5 @@
-if [ ! -d "/etc/nginx/certs/" ]; then
-    mkdir /etc/nginx/certs/
+mkdir /etc/nginx/certs/ || true
+if [ ! -f "/etc/nginx/certs/key.pem" ]; then
     (
     cd /etc/nginx/certs/ || exit
     openssl genrsa -out key.pem 2048
