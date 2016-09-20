@@ -2,6 +2,12 @@
 Builds a basic nginx server that proxies incoming SSL calls to a target
 docker.
 
+## Usage
+
+Image support environment variables to tune up self-signed certificate:
+- `DOMAIN_NAME`, e.g. `example.com`
+- `ADITIONAL_NAMES_CSV`, e.g. `www.example.com,*.www.example.com`
+
 ### Build and Run the Proxy ###
 Build the docker:
 
